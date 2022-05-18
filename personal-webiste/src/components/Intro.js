@@ -8,6 +8,7 @@ import Portrait from '../images/portraitCircle.jpeg';
 
 export default function Intro() {
     return (
+        <>
         <Box
             sx={{
             bgcolor: 'background.paper',
@@ -57,7 +58,29 @@ export default function Intro() {
                     <Button variant="contained"  class="fa fa-twitter" href="https://twitter.com/logand2000"></Button>
                     <Button variant="contained"  class="fa fa-medium" href="https://medium.com/@logan.r.donaldson"></Button>
                 </Stack>
+               
+
+       
             </Container>
+       
         </Box>
+             <Box
+             display="flex"
+             justifyContent="center"
+             alignItems="center"
+             sx={{
+                 bgcolor: '#F8F8F8',
+                 }}
+         >
+             <Box>
+         <iframe src="https://hf.space/embed/ldonald3/feather-classifier/+" frameBorder="0" height="600" width="900" title="Gradio app"></iframe>
+         </Box>
+         <Typography align="center" color="text.secondary" paragraph>
+                    Hi 👋, I am a graduate student at Johns Hopkins University studying Data Science. 
+                    My goal is to leverage artifical intelligence to make the world a better place.
+                </Typography>
+         </Box>
+
+         </>
     )
 }
