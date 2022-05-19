@@ -28,7 +28,8 @@ export default function Header() {
                 >          
                 <Button color="inherit">About Me</Button>
                 <Button color="inherit" onClick={onResumeClick}>Resume</Button>
-                <Button color="inherit">Writing Pieces</Button>
+                <Button color="inherit">Articles & Essays</Button>
+                <Button color="inherit" href="https://space-invaders-ldonald3.netlify.app" target="_blank">Space Invaders!</Button>
                 </Stack>              
             </Toolbar>
             </Box>
@@ -36,3 +37,6 @@ export default function Header() {
         </AppBar>
     )
 }
+
+
+

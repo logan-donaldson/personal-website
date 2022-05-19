@@ -5,15 +5,15 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
 import Portrait from '../images/portraitCircle.jpeg';
-import Demo from './Demo.js'
 
 export default function Intro() {
+
     return (
         <Box
             sx={{
             bgcolor: 'background.paper',
             pt: 8,
-            pb: 6,
+            pb: 12,
             }}
         >      
             <Container maxWidth="sm">
@@ -53,13 +53,12 @@ export default function Intro() {
                     spacing={2}
                     justifyContent="center"
                 >
-                    <Button variant="contained"  class="fa fa-linkedin" href="https://www.linkedin.com/in/logan-donaldson-5169671a5/"></Button>
-                    <Button variant="contained"  class="fa fa-github" href="https://github.com/logan-donaldson"></Button>
-                    <Button variant="contained"  class="fa fa-twitter" href="https://twitter.com/logand2000"></Button>
-                    <Button variant="contained"  class="fa fa-medium" href="https://medium.com/@logan.r.donaldson"></Button>
+                    <Button variant="contained"  class="fa fa-linkedin" href="https://www.linkedin.com/in/logan-donaldson-5169671a5/" target="_blank"></Button>
+                    <Button variant="contained"  class="fa fa-github" href="https://github.com/logan-donaldson" target="_blank"></Button>
+                    <Button variant="contained"  class="fa fa-twitter" href="https://twitter.com/logand2000" target="_blank"></Button>
+                    <Button variant="contained"  class="fa fa-medium" href="https://medium.com/@logan.r.donaldson" target="_blank"></Button>
                 </Stack>  
             </Container>
-            <Demo/>
          </Box>
     )
 }
