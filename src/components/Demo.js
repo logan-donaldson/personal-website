@@ -42,8 +42,8 @@ export default function Demo() {
                     which won the <a href={award} target='_blank' rel="noreferrer"> Intuitive Surgical Best Project Award</a>. 
                     We investigated the utility of both orderful and orderless second-order information for fine-grained image classification
                     tasks (FGIC). To this end we compared the effects of self-attention mechanisms and bilinear convolutional networks. Finally,
-                    we proposed a novel architecture which aimed to leverage the dataset's hierarchical labeling to increase predictive context.
-                    <a href={paper} target='_blank' rel="noreferrer"> Here</a> is a brief paper summarizing our approaches and results.
+                    we proposed a novel architecture which aimed to leverage the dataset's hierarchical labeling to increase predictive context. 
+                    <a href={paper} target='_blank' rel="noreferrer">Here</a> is a brief paper summarizing our approaches and results.
                 </Typography>
             </Box>
         </>

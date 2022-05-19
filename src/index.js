@@ -1,12 +1,19 @@
 import ReactDOM from "react-dom";
-//import App from "./App";
-import Album from "./Album";
-//import {CssBaseline} from "@material-ui/core";
+
+import CssBaseline from '@mui/material/CssBaseline';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { BrowserRouter as Router } from "react-router-dom";
+
+import App from "./App";
+
+const theme = createTheme();
 
 ReactDOM.render(
-  <>
-    {/*<CssBaseline />*/}
-    <Album />
-  </>,
+  <Router>
+    <CssBaseline />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  </Router>,
   document.getElementById("root")
 );

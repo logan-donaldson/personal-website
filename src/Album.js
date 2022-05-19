@@ -1,23 +1,16 @@
 import * as React from 'react';
+import { Route, Switch } from "react-router";
 
-import Button from '@mui/material/Button';
-//import CameraIcon from '@mui/icons-material/PhotoCamera';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardActionArea from '@mui/material/CardActionArea';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-
-import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import Header from './components/Header.js'
 import Intro from './components/Intro.js'
 import Demo from './components/Demo.js'
+import Project from './components/Project.js'
+import Footer from './components/Footer.js'
 
 import ravens from './images/ravens.jpg';
 import bball from './images/bball.jpg';
@@ -38,56 +31,16 @@ export default function Album() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header />
-      <main>
       <Intro /> 
       <Demo/> 
         <Container sx={{ py: 8 }} maxWidth="md">
-          {/* End hero unit */}
           <Grid container spacing={4}>
             {cardData.map((card) => (
-              <Grid item key={card.i} xs={12} sm={6} md={4}>
-                <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                >
-                  <CardActionArea href="https://google.com"> {/*component={RouterLink} to="/questions"*/}
-                  <CardMedia
-                    component="img"
-                    sx={{
-                      // 16:9
-                      pt: '0%',
-                    }}
-                    image={card.img}
-                    alt={card.alt}
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      {card.title}
-                    </Typography>
-                    <Typography>
-                      {card.desc}
-                    </Typography>
-                  </CardContent>
-                  </CardActionArea>
-                </Card>
-              </Grid>
+              <Project img={card.img} alt={card.alt} title={card.title} desc={card.desc}/>
             ))}
           </Grid>
         </Container>
-      </main>
-      {/* Footer */}
-      <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-        Thanks For Visiting!
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-        </Typography>
-      </Box>
-      {/* End footer */}
+      <Footer />
     </ThemeProvider>
   );
 }
