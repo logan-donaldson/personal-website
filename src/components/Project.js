@@ -5,16 +5,18 @@ import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
+import { Link } from "react-router-dom";
+
 export default function Project(props) {
 
-    const { img, alt, title, desc}  = props;
+    const { name, img, alt, title, desc}  = props;
 
     return (
         <Grid item key={title} xs={12} sm={6} md={4}>
             <Card
                 sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
             >
-                <CardActionArea href="https://google.com"> {/*component={RouterLink} to="/questions"*/}
+                <CardActionArea component={Link} to={"/project-".concat(name)}>
                 <CardMedia
                 component="img"
                 sx={{
