@@ -1,12 +1,12 @@
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-import Portrait from '../images/portraitCircle.jpeg';
 
 export default function DisplayProject(props) {
 
-    const { img, alt, title, desc}  = props.data;
+    const { skills, tech, title, par, link}  = props.data;
 
     return (
         <Box
@@ -27,30 +27,15 @@ export default function DisplayProject(props) {
                     {title}
                 </Typography>
                 <Typography variant="h4" align="left" color="text.secondary" paragraph>
-                    Skills & Methodologies: <br/>
-                    Technologies: 
+                    <b>Technologies:</b> {tech} <br/>
+                    <b>Skills & Methodologies:</b> {skills} <br/>
+                    <Button href={link} variant="contained" target="_blank">GitHub Repository</Button>
                 </Typography>
-                <Typography variant="h6" align="left" color="text.secondary" paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, 
-                neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? 
-                Eum quasi quidem quibusdam.
+               
+                <Typography style={{whiteSpace: "pre-line"}} variant="h6" align="left" color="text.primary" paragraph>
+                    {par}
                 </Typography>
-                <Box
-                    class = "crop"
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
-                >
-                    <Box
-                        component="img"
-                        sx={{
-                            display:'flex',
-                        }}
-                        alt={alt}
-                        src={img}
-                    />
-                </Box>
+                
             </Container>
         </Box>
     )

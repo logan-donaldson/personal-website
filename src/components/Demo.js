@@ -44,6 +44,7 @@ export default function Demo() {
                     tasks (FGIC). To this end we compared the effects of self-attention mechanisms and bilinear convolutional networks. Finally,
                     we proposed a novel architecture which aimed to leverage the dataset's hierarchical labeling to increase predictive context. 
                     &nbsp; <a href={paper} target='_blank' rel="noreferrer">Here</a> is a brief paper summarizing our approaches and results.
+                    The project was implmented with PyTorch.
                 </Typography>
             </Box>
         </>

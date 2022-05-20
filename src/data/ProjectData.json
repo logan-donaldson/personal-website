@@ -1,0 +1,6 @@
+ [
+    {"name":"ravens", "img":"./images/ravens.jpg", "alt":"Photo of ravens stadium", "title":"Ravens Analytics Collaboration", "desc":"A deep dive linear regression on NFL punting units"}, 
+    {"name":"schedule", "img":"./images/baseball.jpg", "alt":"Photo of a baseball", "title":"MiLB Schduling", "desc":"Linear program to create the Minor League Baseball schedules"},
+    {"name":"nba", "img":"./images/bball.jpg", "alt":"Photo of an arcade basketball game", "title":"NBA 2K Rating Analysis", "desc":"Used pandas and Matplotlib to perform a quantitative NBA 2k rating retrospective"},
+    {"name":"sudoku", "img":"./images/sudoku.jpg", "alt":"Photo of a sudoku game", "title":"Sudoku Solver", "desc":"Linear program to automatically solve a given Sudoku game"}
+  ]
