@@ -4,13 +4,13 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
-//import Pdf from '../documents/LoganDonaldson_Resume.pdf';
+import Pdf from '../documents/Website_Resume.pdf';
 
 export default function Header() {
 
-  //const onResumeClick = () => {
-  //  window.open(Pdf);
- //}
+  const onResumeClick = () => {
+    window.open(Pdf);
+ }
 
     return (
         <AppBar position="relative">
@@ -27,13 +27,12 @@ export default function Header() {
                     justifyContent="center"
                 >          
                 <Button color="inherit">About Me</Button>
-                <Button color="inherit"> {/*onClick={onResumeClick}*/}Resume</Button>
+                <Button color="inherit" onClick={onResumeClick}>Resume</Button>
                 <Button color="inherit">Articles & Essays</Button>
                 <Button color="inherit">Contact Me</Button>
                 </Stack>              
             </Toolbar>
             </Box>
-        
         </AppBar>
     )
 }
