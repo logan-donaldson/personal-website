@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import CottageIcon from '@mui/icons-material/Cottage';
 import Fab from "@mui/material/Fab";
 
+
 /*
     Error page for when user navigates to a non-existing page,
     Links back to home page

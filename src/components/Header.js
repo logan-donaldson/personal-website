@@ -3,6 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
+import { Link } from "react-router-dom";
 
 import Pdf from '../documents/Website_Resume.pdf';
 
@@ -28,8 +29,12 @@ export default function Header() {
                 >          
                 <Button color="inherit">About Me</Button>
                 <Button color="inherit" onClick={onResumeClick}>Resume</Button>
-                <Button color="inherit">Articles & Essays</Button>
-                <Button color="inherit">Contact Me</Button>
+                <Link style={{color: 'inherit', textDecoration: 'none'}} to="/writing">
+                    <Button color="inherit">Articles & Essays</Button>
+                </Link>
+                <Link style={{color: 'inherit', textDecoration: 'none'}} to="/contact">
+                    <Button color="inherit">Contact Me</Button>
+                </Link>
                 </Stack>              
             </Toolbar>
             </Box>

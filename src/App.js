@@ -4,6 +4,8 @@ import { Route, Switch } from "react-router";
 import Container from '@mui/material/Container';
 import Landing from './pages/Landing.js'
 import NotFoundPage from './pages/NotFoundPage.js'
+import ContactPage from './pages/ContactPage.js'
+import WritingPage from './pages/WritingPage.js'
 import DisplayProject from './pages/DisplayProject.js'
 
 import ravens from './images/ravens.jpg';
@@ -77,6 +79,12 @@ class App extends Component {
           </Route>
           <Route path="/project-sudoku">
               <DisplayProject data={this.cardData[3]}/>
+          </Route>
+          <Route path="/contact">
+              <ContactPage/>
+          </Route>
+          <Route path="/writing">
+              <WritingPage/>
           </Route>
           <Route path="*">
             <NotFoundPage/>
