@@ -3,6 +3,9 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import Fab from "@mui/material/Fab";
+
+import ArrowDownwardRoundedIcon from '@mui/icons-material/ArrowDownwardRounded';
 
 import Portrait from '../images/portraitCircle.jpeg';
 
@@ -57,7 +60,20 @@ export default function Intro() {
                     <Button variant="contained"  class="fa fa-github" href="https://github.com/logan-donaldson" target="_blank"></Button>
                     <Button variant="contained"  class="fa fa-twitter" href="https://twitter.com/logand2000" target="_blank"></Button>
                     <Button variant="contained"  class="fa fa-medium" href="https://medium.com/@logan.r.donaldson" target="_blank"></Button>
-                </Stack>  
+                </Stack>
+                <Box
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    sx={{
+                        bgcolor: 'background.paper',
+                        pt: 4,
+                        }}
+                >
+                <Fab color="primary" disabled >
+                    <ArrowDownwardRoundedIcon /> 
+                </Fab>
+                </Box> 
             </Container>
          </Box>
     )

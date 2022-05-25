@@ -2,12 +2,13 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import useEffect from 'react';
 
 
 export default function DisplayProject(props) {
 
     const { skills, tech, title, par, link}  = props.data;
-
+      
     return (
         <Box
             sx={{
