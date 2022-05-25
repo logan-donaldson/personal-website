@@ -30,7 +30,7 @@ export default function Header() {
                 <Button color="inherit">About Me</Button>
                 <Button color="inherit" onClick={onResumeClick}>Resume</Button>
                 <Link style={{color: 'inherit', textDecoration: 'none'}} to="/writing">
-                    <Button color="inherit">Articles & Essays</Button>
+                    <Button color="inherit">Writing Samples</Button>
                 </Link>
                 <Link style={{color: 'inherit', textDecoration: 'none'}} to="/contact">
                     <Button color="inherit">Contact Me</Button>
