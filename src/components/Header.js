@@ -26,8 +26,10 @@ export default function Header() {
                     direction="row"
                     spacing={10}
                     justifyContent="center"
-                >          
-                <Button color="inherit">About Me</Button>
+                >     
+                <Link style={{color: 'inherit', textDecoration: 'none'}} to="/about">    
+                    <Button color="inherit">About Me</Button>
+                </Link> 
                 <Button color="inherit" onClick={onResumeClick}>Resume</Button>
                 <Link style={{color: 'inherit', textDecoration: 'none'}} to="/writing">
                     <Button color="inherit">Writing Samples</Button>

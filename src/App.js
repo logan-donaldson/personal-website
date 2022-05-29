@@ -7,6 +7,7 @@ import NotFoundPage from './pages/NotFoundPage.js'
 import ContactPage from './pages/ContactPage.js'
 import WritingPage from './pages/WritingPage.js'
 import DisplayProject from './pages/DisplayProject.js'
+import AboutPage from './pages/AboutPage.js'
 
 import ravens from './images/ravens.jpg';
 import bball from './images/bball.jpg';
@@ -85,6 +86,9 @@ class App extends Component {
           </Route>
           <Route path="/writing">
               <WritingPage/>
+          </Route>
+          <Route path="/about">
+              <AboutPage/>
           </Route>
           <Route path="*">
             <NotFoundPage/>
