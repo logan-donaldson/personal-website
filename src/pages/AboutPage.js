@@ -5,8 +5,18 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
+import {useEffect} from 'react';
+
+import * as API from "../services/api.js"
+
+
+
 
 function AboutPage() {
+
+    useEffect(() => {
+        const code = API.init();
+      });
 
     const styles = {
         fab: {
@@ -112,8 +122,22 @@ function AboutPage() {
                     <Divider/>
                     <Typography style={{whiteSpace: "pre"}} variant="h5" align="left" color="text.primary" paragraph>
 {`\u2022 Proficient: Python (PyTorch, scikit-learn, pandas, NumPy), Jupyter Notebooks, Deep Learning, 
-  Computer Vision, Git 
+  Computer Vision, Git, Latex 
 \u2022 Familiar: C/C++, Java, Web Development (JavaScript, React, MongoDB), MATLAB, R, SQLite`}
+                    </Typography>
+                    <Typography component="h1"
+                                variant="h3"
+                                align="left"
+                                color="text.primary">
+                                    Relevant Coursework 🏫
+                    </Typography>
+                    <Divider/>
+                    <Typography style={{whiteSpace: "pre"}} variant="h5" align="left" color="text.primary" paragraph>
+{`\u2022 Undergraduate Courses: Calculus I-III, Linear Algebra, Diffeential Equations, Optimization I-II, 
+  Intermediate Programming (C++), Data Structures (Java), Discrete Math, Fullstack Javascript
+\u2022 Graduate Courses: Machine Learning, Deep Learning, Intro to Data Science, Probabaility, Statistics, 
+  Applied Statistics & Data Analysis, Game Theory, Computing for Applied Mathematics, 
+  Mathematical Image Analysis`}
                     </Typography>
                     <Typography component="h1"
                                 variant="h3"
@@ -123,8 +147,11 @@ function AboutPage() {
                     </Typography>
                     <Divider/>
                     <Typography style={{whiteSpace: "pre"}} variant="h5" align="left" color="text.primary" paragraph>
-{`Bachelor of Science, Applied Mathematics & Statistics 🧮
-Master of Science in Engineering, Data Science 🖥️`}
+{`\u2022 Video Games
+        \u2023 Favorites include: The Last of Us, Civilization V, Skyrim, God of War (2018)
+\u2022 Running & Weightlifitng
+\u2022 Reading Fiction, Nonfiction, and Graphic Novels
+        \u2023 Favorites include: The Kite Runner, Daytripper, Jonathan Livingston Seagull, Death of a Salesman`}
                     </Typography>
                 </Container>
             </Box>

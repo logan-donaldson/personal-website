@@ -24,7 +24,7 @@ export default function Demo() {
                 height="100%" 
                 width="100%" 
                 title="Gradio app" 
-                class="container p-0 flex-grow space-iframe"> Loading...
+                className="container p-0 flex-grow space-iframe"> Loading...
                 </iframe> 
                 
             </Box>

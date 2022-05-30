@@ -10,7 +10,6 @@ import Demo from '../components/Demo.js'
 import Project from '../components/Project.js'
 import Footer from '../components/Footer.js'
 
-
 export default function Landing(props) {
     return (
         <>
@@ -35,7 +34,7 @@ export default function Landing(props) {
                 <Container sx={{ py: 4 }} maxWidth="md">
                 <Grid container spacing={4}>
                     {props.data.map((card) => (
-                    <Project name = {card.name} img={card.img} alt={card.alt} title={card.title} desc={card.desc}/>
+                    <Project key = {card.name} name = {card.name} img={card.img} alt={card.alt} title={card.title} desc={card.desc}/>
                     ))}
                 </Grid>
                 </Container>

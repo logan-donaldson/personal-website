@@ -8,6 +8,8 @@ import App from "./App";
 
 const theme = createTheme();
 
+console.error = () => {};
+
 ReactDOM.render(
   <Router>
     <CssBaseline />

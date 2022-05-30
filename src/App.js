@@ -13,6 +13,7 @@ import ravens from './images/ravens.jpg';
 import bball from './images/bball.jpg';
 import baseball from './images/baseball.jpg';
 import sudoku from './images/sudoku.jpg';
+import realign from './images/realign.jpg';
 
 class App extends Component {
 
@@ -59,7 +60,15 @@ class App extends Component {
     skills:"Linear Programming",
     tech:"MATLAB",
     link:"https://github.com/logan-donaldson/linear-programming-sudoku-solver",
-    par:``}
+    par:`Sudoku, the classic puzzle game, can be viewed as an optimization problem. The rules governing where numbers can be placed in each row, column, and block can be expressed as linear constraints. The Simplex algorithm can then be used to find a feasible solution.
+    
+    My implmentation accepts as input a 9x9 matrix representing a Sudoku game. If the game is valid then it outputs a 9x9 matrix representing the solution. However, if the game is invalid, that is if no feasible solution exists, then the program changes the minimum amount of numbers required to make the game the feasible and then outputs the solution. This alteration of infeasible games is acheived through the objective function which penalizes every alteration.`},
+    {name:"realign", img:realign, alt:'Photo a sports field', title:'Sports League Realignment', 
+    desc:'Used a modified K-Means alogorithm to reduce travel distance amongst sports leagues',
+    skills:"Unsupervised Learning (Clustering)",
+    tech:"Python, Jupyter Notebooks",
+    link:"https://github.com/logan-donaldson/sports-league-realignment",
+    par:``},
   ];
 
   render() {
@@ -80,6 +89,9 @@ class App extends Component {
           </Route>
           <Route path="/project-sudoku">
               <DisplayProject data={this.cardData[3]}/>
+          </Route>
+          <Route path="/project-realign">
+              <DisplayProject data={this.cardData[4]}/>
           </Route>
           <Route path="/contact">
               <ContactPage/>

@@ -28,9 +28,9 @@ export default function Header() {
                     justifyContent="center"
                 >     
                 <Link style={{color: 'inherit', textDecoration: 'none'}} to="/about">    
-                    <Button color="inherit">About Me</Button>
+                    <Button color="inherit">About Me (Extended Resume)</Button>
                 </Link> 
-                <Button color="inherit" onClick={onResumeClick}>Resume</Button>
+                <Button color="inherit" onClick={onResumeClick}>Resume (PDF)</Button>
                 <Link style={{color: 'inherit', textDecoration: 'none'}} to="/writing">
                     <Button color="inherit">Writing Samples</Button>
                 </Link>
