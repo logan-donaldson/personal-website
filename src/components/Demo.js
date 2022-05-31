@@ -1,3 +1,4 @@
+import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
@@ -44,9 +45,21 @@ export default function Demo() {
                     tasks. To this end we compared the performance of self-attention mechanisms and bilinear convolutional networks. Finally,
                     we proposed a novel architecture which aimed to leverage the dataset's hierarchical labeling to increase predictive context. 
                     &nbsp; <a href={paper} target='_blank' rel="noreferrer">Here</a> is a brief paper summarizing our approaches and results.
-                    The project was implmented with PyTorch.
+                    The project was implmented with PyTorch. 
                 </Typography>
+                
             </Box>
+            <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            sx={{
+                bgcolor: '#F8F8F8',
+                }}
+            > 
+            <Button href={'https://github.com/logan-donaldson/feather-classifier'} variant="contained" target="_blank">GitHub Repository</Button>
+            </Box>
+           
         </>
     )
 }

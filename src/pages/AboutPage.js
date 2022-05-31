@@ -4,19 +4,9 @@ import Fab from "@mui/material/Fab";
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
-import {useEffect} from 'react';
-
-import * as API from "../services/api.js"
-
-
-
+import Divider from '@mui/material/Divider';;
 
 function AboutPage() {
-
-    useEffect(() => {
-        const code = API.init();
-      });
 
     const styles = {
         fab: {
@@ -63,10 +53,12 @@ function AboutPage() {
 {`\u2022 Amazon Web Services Software Development Engineer Intern
         \u25E6 May 2022 - August 2022
                 \u2023 More details coming soon!
+
 \u2022 Teaching Assistant (Intro to Optimization, Applied Statistics & Data Analysis, Intro to Statistcs)
         \u25E6 August 2020 - May 2022
                 \u2023 Taught weekly discussion section for ~15 students and hold office hours
                 \u2023 Coordinated with other teaching assistants to form a rubric and grade exams/homework
+
 \u2022 MiLB Scheduling Intern
         \u25E6 June 2020 - August 2020
                 \u2023 Modeled and produced multiple 2021 minor league baseball schedules in terms of integer linear
@@ -101,13 +93,16 @@ function AboutPage() {
 {`\u2022 Intuitive Surgical Best Deep Learning Project Award
         \u2023 Awarded to my group's project titled "Fine-grained Classification of Bird Species" as part of 
           the graduate level course CS482/682 Machine Learning: Deep Learning, Spring 2021
+
 \u2022 Applied Mathematics & Statistics Acheivement Award
         \u2023 This award recognizes outstanding achievement by one or more undergraduates across a broad 
           spectrum of department activities, including academic performance, research, pedagogy, and 
           leadership
+
 \u2022 Naddor Prize
         \u2023 The Naddor Prize is awarded to a non-senior undergraduate major for significant achievement 
           in departmentally related academic and extracurricular activities
+
 \u2022 2020-2022 Albert and Elaine Slechter Scholarship for Engineering Undergraduates at JHU
         \u2023 Awarded to an engineering student from Maryland  representing the highest caliber of academic 
           achievement, extracurricular involvement, and the pursuit of personal interests, in addition to 
@@ -123,6 +118,7 @@ function AboutPage() {
                     <Typography style={{whiteSpace: "pre"}} variant="h5" align="left" color="text.primary" paragraph>
 {`\u2022 Proficient: Python (PyTorch, scikit-learn, pandas, NumPy), Jupyter Notebooks, Deep Learning, 
   Computer Vision, Git, Latex 
+
 \u2022 Familiar: C/C++, Java, Web Development (JavaScript, React, MongoDB), MATLAB, R, SQLite`}
                     </Typography>
                     <Typography component="h1"
@@ -133,8 +129,9 @@ function AboutPage() {
                     </Typography>
                     <Divider/>
                     <Typography style={{whiteSpace: "pre"}} variant="h5" align="left" color="text.primary" paragraph>
-{`\u2022 Undergraduate Courses: Calculus I-III, Linear Algebra, Diffeential Equations, Optimization I-II, 
+{`\u2022 Undergraduate Courses: Calculus I-III, Linear Algebra, Differential Equations, Optimization I-II, 
   Intermediate Programming (C++), Data Structures (Java), Discrete Math, Fullstack Javascript
+
 \u2022 Graduate Courses: Machine Learning, Deep Learning, Intro to Data Science, Probabaility, Statistics, 
   Applied Statistics & Data Analysis, Game Theory, Computing for Applied Mathematics, 
   Mathematical Image Analysis`}
@@ -149,7 +146,9 @@ function AboutPage() {
                     <Typography style={{whiteSpace: "pre"}} variant="h5" align="left" color="text.primary" paragraph>
 {`\u2022 Video Games
         \u2023 Favorites include: The Last of Us, Civilization V, Skyrim, God of War (2018)
+
 \u2022 Running & Weightlifitng
+
 \u2022 Reading Fiction, Nonfiction, and Graphic Novels
         \u2023 Favorites include: The Kite Runner, Daytripper, Jonathan Livingston Seagull, Death of a Salesman`}
                     </Typography>

@@ -14,6 +14,12 @@ import bball from './images/bball.jpg';
 import baseball from './images/baseball.jpg';
 import sudoku from './images/sudoku.jpg';
 import realign from './images/realign.jpg';
+import seam from './images/seam.jpg';
+import orioles from './images/orioles.jpg';
+import discord from './images/discord.jpg';
+import rain from './images/rain.jpg';
+import bloo from './images/bloo.jpg';
+import site from './images/site.jpg';
 
 class App extends Component {
 
@@ -25,7 +31,9 @@ class App extends Component {
     link:"https://github.com/logan-donaldson/baltimore-ravens-punt-analytics",
     par:`In collaboration with the Baltimore Ravens my research team was tasked with gleaning interesting insights about punts in the NFL from a proprietary play-by-play data set courtesy of PFF. 
     
-    In short, I took the data set and after some cleaning formed various linear regression models to predict the length of NFL punt returns using in-game variables such as starting field position, punt distance, and punt hang time. The data cleaning involved creating dummy variables for categorical predictors and transforming predictors to a positive linear scale. The response variable was punt return yards. After starting with over a dozen predictor variables I reduced the model to include only those predictors which significantly improved the fit. The removal of predictors was justified via an ANOVA test. This step in model reduction was important as it made the findings significantly more intuitive and easily conveyed to the Baltimore Ravens Analytics Team. At this point the R-squared value for what would eventually become the final model was 0.1357. \n I then checked for points of high-leverage using half-normal quantile-quantile plot and Cook's distance. I also checked for influential points by looking at DFBETAS. After removing a couple points, which severely skewed the model, the R-squared model improved to 0.1439. 
+    In short, I took the data set and after some cleaning formed various linear regression models to predict the length of NFL punt returns using in-game variables such as starting field position, punt distance, and punt hang time. The data cleaning involved creating dummy variables for categorical predictors and transforming predictors to a positive linear scale. The response variable was punt return yards. After starting with over a dozen predictor variables I reduced the model to include only those predictors which significantly improved the fit. The removal of predictors was justified via an ANOVA test. This step in model reduction was important as it made the findings significantly more intuitive and easily conveyed to the Baltimore Ravens Analytics Team. At this point the R-squared value for what would eventually become the final model was 0.1357. 
+    
+    I then checked for points of high-leverage using half-normal quantile-quantile plot and Cook's distance. I also checked for influential points by looking at DFBETAS. After removing a couple points, which severely skewed the model, the R-squared model improved to 0.1439. 
     
     Next, I applied a transformation to the response variable which further raised the R-squared value to 0.2046. Whether this was an improvement or not, however, depends on the preferences of the model user. Some would prioritize ease of interpretation over strength of fit and for them this transformation would not be ideal. When presenting the model on the poster I opted to not use the transformation as it made explaining our findings much more intuitive. 
     
@@ -68,7 +76,57 @@ class App extends Component {
     skills:"Unsupervised Learning (Clustering)",
     tech:"Python, Jupyter Notebooks",
     link:"https://github.com/logan-donaldson/sports-league-realignment",
-    par:``},
+    par:`Professional sports leagues in the United States such as the MLB, NFL, and NBA require teams to undergo large amounts of travel. Stakeholders would like this travel to be minimzed as doing so reduces costs and environmental impact while improving player recovery. Teams most often play opponents within the same division. Thus, if teams within the same division as are close as possible overall travel across the league can be minimzed.
+    
+    One way of solving this problem is through unsupervised clustering techniques such as K-Means. However, divisons must be approximatelty the same size. Thus, I employ a modified K-Means algorithm to create divisions which minimze travel while retaining uniform size.
+    
+    I published an article in Towards Data Science detailing my approach and results. A link to this article can be found in the GitHub repository or under the Writing Samples tab on this website.`},
+    {name:"seam", img:seam, alt:'Photo of a collage of photographs', title:'Seam Carving Implementation', 
+    desc:'Implemented variations of the seam carving algorithm for content-aware image resizing',
+    skills:"Image Manipulation, Dynamic Programming",
+    tech:"Python, Jupyter Notebooks, Latex",
+    link:"https://github.com/logan-donaldson/seam-carving",
+    par:`The two primary means of downsizing images, cropping and interpolation, each some with drawbacks. Cropping can only remove pixels from the image's periphery while interpolation commonly causes noticeable distortions. Seam carving attempts to address these shortcomings by removing connected pixels from the image's interior. Seam carving uses an "energy function" to detirmine where "interesting" regions of the image lies and then removes pixels in the "uninteresting" background regions. In this way the image's contents is preserved and artifacts are minimal. Using a similar approach the size of an image can also be expanded.
+    
+    This implmentation of seam carving was part of a final project in a course titled "Mathematical Image Analysis." A 7-page paper written in Latex summarizing the results can be found in the GitHub repo as well as under the Writing Samples tab on this website. `},
+    {name:"orioles", img:orioles, alt:'Photo of an Oriole', title:'Baltimore Orioles Analystics Collaboration', 
+    desc:'Fit probabaility distributions to batted ball data for simulation purposes',
+    skills:"Probabaility Distributions",
+    tech:"Python, Jupyter Notebooks",
+    link:"https://github.com/logan-donaldson/orioles-prob-distributions",
+    par:`In collaboartion with the Baltimore Orioles I attempted to fit parametric probability distributions to bivariate batted ball data. Batted ball data consists of exit velocity and launch angle. The goal is to devlop a methodology that will fit a probabaility distribution from a selected parametric family to each player's batted ball data for a given season. Then, using this distribution, batted balls can be "sampled" from for the purposes of simulation.
+    
+    Ultimately, I was unable to construct a suitable probabaility distribution that statisfied the stakeholder's desired level of complexity and accuracy. My distrubtions either consisted of too many parameters or were not accurate enough. I plan to revisit this project when time allows.`},
+    {name:"discord", img:discord, alt:'Image of the Discord logo', title:'Discord Chat Bot', 
+    desc:'Used the Discord API to devlope a bot for use in personal servers',
+    skills:"API Integration, Web Scraping",
+    tech:"Python, API",
+    link:"https://github.com/logan-donaldson/discord-bot",
+    par:`Developed a bot for the popular chat app Discord. Functionality includes sending gifs and stickers scraped from tenor.com along with hard-coded jokes. Commands are preceeded with an '!' and followed by search terms (i.e. !gif person_running)`},
+    {name:"rain", img:rain, alt:'Photo of rain clouds', title:'Australian Rain Prediction', 
+    desc:'Used a variety of models and weather data to predict next-day rain',
+    skills:"Data Preprocessing, Imputation, K-Fold Cross Validation, Logistic Regression, Linear/Quadratic Discriminate Analysis, Random Forests, Support Vectore Machines, K-Nearest Neighbors, Naive Bayes",
+    tech:"Python, Juputer Notebooks",
+    link:"https://github.com/logan-donaldson/rain-prediction",
+    par:`Using data collected from weather stations scattered across Australia my group attempted to predict whether it would rain the next day. Data was first preprocessed using pandas to convert datatypes, align naming conventions, etc. Then imputation techniques were used to fill in missing data entries. Lastly, a variety of models were tested. Logistic regression performed best with 85% accuracy. A complete summary of the results can be found in the PowerPoint presentation in the associated GitHub Repo.`},
+    {name:"bloo", img:bloo, alt:'A white neon sign in the shape of a text bubble', title:'A Fullstack (MERN) Chat App', 
+    desc:'Used a variety of models and weather data to predict next-day rain',
+    skills:"Fullstack Web Development",
+    tech:"JavaScript, MongoDB, Express, React, Node, Nunjucks",
+    link:"https://bloo-chat-ldonald3.herokuapp.com/",
+    par:` A chat app created using MongoDB, Express, React, and Node. Since this was part of a course I am unable to provide the source code. However, I have provided a dtailed explanation of how the app works below. The "GitHub Repository" button above will take you to the app which is deployed on Heroku.
+    
+    When a user first navigates to the app they find themselves at the landing page with an HTML form in which they can type their username and password. After supplying this information the user can then either click the "Register" button is they are a new user or the "Login" button if they are a returning user. In the case of registration a POST request containing the supplied username and password is sent to /register. If the registration is successful the password will be hashed and salted and a new User entry will be created in the MongoDB database. The user will be redirected to /chatroom. In the case of logging-in a POST request is sent to /authenticate which checks if the username and (hashed/salted) password match an entry stored in the database. If they do the user is redirected to /chatroom. In either case if the action fails an error screen is displayed with information about the error.
+
+    After entering the chatroom the user is connected to the server via socket.io. This triggers the "connect" event on the front-end which emits a "welcomeMessage" to the server which subsequently emits the "welcomeMessage" back out to all users. When a user disconnects from the server-side this triggers a "disconnect" event which emits a "diconnectMessage" back out to all users. When a client receives a "welcomeMessage" a new message (in green) is appended alerting them of joined user. When a client receives a "disconnectMessage" a new message (in red) is appended alerting them of the player who left. An object mapping user IDs to usernames is kept on the server-side and is updated whenever a client joins or leaves. This is used to display who is online.
+    
+    Finally, when a user sends a message the "submit" event is triggered which emits a "message" to the server which then emits the "message" back out to all connected clients. When a client receives a "message" event the sender's username and the message's content are inserted into the document as textNodes.`},
+    {name:"site", img:site, alt:'A photo of a laptop computer', title:'This Very Website!', 
+    desc:'The portfolio website you are interacting with right now!',
+    skills:"Frontend Web Development",
+    tech:"JavaScript, React, Node",
+    link:"https://github.com/logan-donaldson/personal-website",
+    par:`This website was created using Material-UI and React. I created this website to serve as a central hub for my various endeavors. I hope you have found something of interest!`},
   ];
 
   render() {
@@ -92,6 +150,24 @@ class App extends Component {
           </Route>
           <Route path="/project-realign">
               <DisplayProject data={this.cardData[4]}/>
+          </Route>
+          <Route path="/project-seam">
+              <DisplayProject data={this.cardData[5]}/>
+          </Route>
+          <Route path="/project-orioles">
+              <DisplayProject data={this.cardData[6]}/>
+          </Route>
+          <Route path="/project-discord">
+              <DisplayProject data={this.cardData[7]}/>
+          </Route>
+          <Route path="/project-rain">
+              <DisplayProject data={this.cardData[8]}/>
+          </Route>
+          <Route path="/project-bloo">
+              <DisplayProject data={this.cardData[9]}/>
+          </Route>
+          <Route path="/project-site">
+              <DisplayProject data={this.cardData[10]}/>
           </Route>
           <Route path="/contact">
               <ContactPage/>
